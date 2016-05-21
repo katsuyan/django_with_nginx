@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/project":{"owner":"vagrant","group":"vagrant","mount_options":["dmode=777","fmode=777"],"guestpath":"/home/project","hostpath":"/Users/katsuya/MyVagrant/django_with_nginx/project","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/katsuya/MyVagrant/django_with_nginx","disabled":false}}}
