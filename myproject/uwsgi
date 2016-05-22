@@ -12,8 +12,8 @@
 . /lib/lsb/init-functions
 
 PROGNAME="uwsgi"
-PID="/tmp/$PROGNAME.pid"
-LOCK="/tmp/$PROGNAME.lock"
+PID="/var/lock/subdys/$PROGNAME.pid"
+LOCK="/var/lock/subdys/$PROGNAME.lock"
 RETVAL=0
 
 UWSGI_BIN="/home/vagrant/.pyenv/shims/uwsgi"
@@ -22,12 +22,15 @@ UWSGI_LOG="/home/myproject/log/$PROGNAME.log"
 UWSGI_APP_INIT="/home/myproject/uwsgi.ini"
 
 PROG=$UWSGI_BIN
+SSD="/sbin/start-stop-daemon"
 
 [ -f $PROG ] || exit 0
 
 start() {
+        mkdir /var/lock/subdys/
+        touch /var/lock/subdys/uwsgi.log
         echo -n "Starting $PROGNAME: "
-        $PROG $UWSGI_APP_INIT -d $UWSGI_LOG --pidfile $PID
+        $SSD --start --quiet --background --retry 5 --oknodo --exec $PROG $UWSGI_APP_INIT -- --pidfile $PID
         echo
         [ $RETVAL = 0 ] && touch $LOCK
         return $RETVAL

@@ -210,3 +210,299 @@ lock engine: pthread robust mutexes
 thunder lock: disabled (you can enable it with --thunder-lock)
 probably another instance of uWSGI is running on the same address (:8001).
 bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.13.1 (64bit) on [Sun May 22 08:31:17 2016] ***
+compiled with version: 4.8.4 on 22 May 2016 08:30:50
+os: Linux-3.13.0-63-generic #103-Ubuntu SMP Fri Aug 14 21:42:59 UTC 2015
+nodename: vagrant-ubuntu-trusty-64
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /tmp/uwsgi.pid
+detected binary path: /home/vagrant/.pyenv/versions/3.5.1/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/myproject
+your processes number limit is 3842
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8001 fd 3
+Python version: 3.5.1 (default, May 22 2016, 08:29:38)  [GCC 4.8.4]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x258c9b0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145536 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x258c9b0 pid: 21337 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 21337)
+spawned uWSGI worker 1 (pid: 21353, cores: 1)
+[pid: 21353|app: 0|req: 1/1] 192.168.56.1 () {44 vars in 826 bytes} [Sun May 22 17:44:44 2016] GET /admin/login/?next=/admin/ => generated 1712 bytes in 48 msecs (HTTP/1.1 200) 7 headers in 373 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.13.1 (64bit) on [Sun May 22 09:19:49 2016] ***
+compiled with version: 4.8.4 on 22 May 2016 08:30:50
+os: Linux-3.13.0-63-generic #103-Ubuntu SMP Fri Aug 14 21:42:59 UTC 2015
+nodename: vagrant-ubuntu-trusty-64
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /tmp/uwsgi.pid
+detected binary path: /home/vagrant/.pyenv/versions/3.5.1/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/myproject
+your processes number limit is 3842
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8001 fd 3
+Python version: 3.5.1 (default, May 22 2016, 08:29:38)  [GCC 4.8.4]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x181f9b0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145536 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x181f9b0 pid: 2264 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2264)
+spawned uWSGI worker 1 (pid: 2266, cores: 1)
+[pid: 2266|app: 0|req: 1/1] 192.168.56.1 () {44 vars in 826 bytes} [Sun May 22 18:19:52 2016] GET /admin/login/?next=/admin/ => generated 1712 bytes in 44 msecs (HTTP/1.1 200) 7 headers in 373 bytes (1 switches on core 0)
+[pid: 2266|app: 0|req: 2/2] 192.168.56.1 () {44 vars in 826 bytes} [Sun May 22 18:19:54 2016] GET /admin/login/?next=/admin/ => generated 1712 bytes in 10 msecs (HTTP/1.1 200) 7 headers in 373 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (:8001)
+running /home/vagrant/.pyenv/versions/3.5.1/bin/uwsgi
+[uWSGI] getting INI configuration from /home/myproject/uwsgi.ini
+*** Starting uWSGI 2.0.13.1 (64bit) on [Sun May 22 18:21:28 2016] ***
+compiled with version: 4.8.4 on 22 May 2016 08:30:50
+os: Linux-3.13.0-63-generic #103-Ubuntu SMP Fri Aug 14 21:42:59 UTC 2015
+nodename: vagrant-ubuntu-trusty-64
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+detected binary path: /home/vagrant/.pyenv/versions/3.5.1/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/myproject
+your processes number limit is 3842
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.5.1 (default, May 22 2016, 08:29:38)  [GCC 4.8.4]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2920ad0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145536 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x2920ad0 pid: 2264 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 2264)
+spawned uWSGI worker 1 (pid: 2501, cores: 1)
+*** Starting uWSGI 2.0.13.1 (64bit) on [Sun May 22 09:23:07 2016] ***
+compiled with version: 4.8.4 on 22 May 2016 08:30:50
+os: Linux-3.13.0-63-generic #103-Ubuntu SMP Fri Aug 14 21:42:59 UTC 2015
+nodename: vagrant-ubuntu-trusty-64
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /tmp/uwsgi.pid
+detected binary path: /home/vagrant/.pyenv/versions/3.5.1/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/myproject
+your processes number limit is 3842
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8001 fd 3
+Python version: 3.5.1 (default, May 22 2016, 08:29:38)  [GCC 4.8.4]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x114e9b0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145536 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x114e9b0 pid: 1928 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1928)
+spawned uWSGI worker 1 (pid: 1930, cores: 1)
+*** Starting uWSGI 2.0.13.1 (64bit) on [Sun May 22 09:23:18 2016] ***
+compiled with version: 4.8.4 on 22 May 2016 08:30:50
+os: Linux-3.13.0-63-generic #103-Ubuntu SMP Fri Aug 14 21:42:59 UTC 2015
+nodename: vagrant-ubuntu-trusty-64
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /tmp/uwsgi.pid
+detected binary path: /home/vagrant/.pyenv/versions/3.5.1/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/myproject
+your processes number limit is 3842
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (:8001).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.13.1 (64bit) on [Sun May 22 09:23:19 2016] ***
+compiled with version: 4.8.4 on 22 May 2016 08:30:50
+os: Linux-3.13.0-63-generic #103-Ubuntu SMP Fri Aug 14 21:42:59 UTC 2015
+nodename: vagrant-ubuntu-trusty-64
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /tmp/uwsgi.pid
+detected binary path: /home/vagrant/.pyenv/versions/3.5.1/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/myproject
+your processes number limit is 3842
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (:8001).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.13.1 (64bit) on [Sun May 22 09:27:32 2016] ***
+compiled with version: 4.8.4 on 22 May 2016 08:30:50
+os: Linux-3.13.0-63-generic #103-Ubuntu SMP Fri Aug 14 21:42:59 UTC 2015
+nodename: vagrant-ubuntu-trusty-64
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /tmp/uwsgi.pid
+detected binary path: /home/vagrant/.pyenv/versions/3.5.1/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/myproject
+your processes number limit is 3842
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (:8001).
+bind(): Address already in use [core/socket.c line 769]
+[pid: 1930|app: 0|req: 1/1] 192.168.56.1 () {44 vars in 826 bytes} [Sun May 22 18:27:55 2016] GET /admin/login/?next=/admin/ => generated 1712 bytes in 62 msecs (HTTP/1.1 200) 7 headers in 373 bytes (1 switches on core 0)
+[pid: 1930|app: 0|req: 2/2] 192.168.56.1 () {44 vars in 826 bytes} [Sun May 22 18:35:16 2016] GET /admin/login/?next=/admin/ => generated 1712 bytes in 10 msecs (HTTP/1.1 200) 7 headers in 373 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.13.1 (64bit) on [Sun May 22 09:35:30 2016] ***
+compiled with version: 4.8.4 on 22 May 2016 08:30:50
+os: Linux-3.13.0-63-generic #103-Ubuntu SMP Fri Aug 14 21:42:59 UTC 2015
+nodename: vagrant-ubuntu-trusty-64
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /tmp/uwsgi.pid
+detected binary path: /home/vagrant/.pyenv/versions/3.5.1/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/myproject
+your processes number limit is 3842
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (:8001).
+bind(): Address already in use [core/socket.c line 769]
+[pid: 1930|app: 0|req: 3/3] 192.168.56.1 () {44 vars in 826 bytes} [Sun May 22 18:35:34 2016] GET /admin/login/?next=/admin/ => generated 1712 bytes in 13 msecs (HTTP/1.1 200) 7 headers in 373 bytes (1 switches on core 0)
+[pid: 1930|app: 0|req: 4/4] 192.168.56.1 () {44 vars in 826 bytes} [Sun May 22 18:35:41 2016] GET /admin/login/?next=/admin/ => generated 1712 bytes in 9 msecs (HTTP/1.1 200) 7 headers in 373 bytes (1 switches on core 0)
+[pid: 1930|app: 0|req: 5/5] 192.168.56.1 () {44 vars in 826 bytes} [Sun May 22 18:35:43 2016] GET /admin/login/?next=/admin/ => generated 1712 bytes in 16 msecs (HTTP/1.1 200) 7 headers in 373 bytes (1 switches on core 0)
+[pid: 1930|app: 0|req: 6/6] 192.168.56.1 () {44 vars in 826 bytes} [Sun May 22 18:35:44 2016] GET /admin/login/?next=/admin/ => generated 1712 bytes in 13 msecs (HTTP/1.1 200) 7 headers in 373 bytes (1 switches on core 0)
+[pid: 1930|app: 0|req: 7/7] 192.168.56.1 () {44 vars in 826 bytes} [Sun May 22 18:36:00 2016] GET /admin/login/?next=/admin/ => generated 1712 bytes in 12 msecs (HTTP/1.1 200) 7 headers in 373 bytes (1 switches on core 0)
+[pid: 1930|app: 0|req: 8/8] 192.168.56.1 () {52 vars in 1032 bytes} [Sun May 22 18:36:01 2016] POST /admin/login/?next=/admin/ => generated 1939 bytes in 10 msecs (HTTP/1.1 200) 7 headers in 373 bytes (1 switches on core 0)
+[pid: 1930|app: 0|req: 9/9] 192.168.56.1 () {42 vars in 758 bytes} [Sun May 22 18:36:14 2016] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 7 headers in 292 bytes (1 switches on core 0)
+[pid: 1930|app: 0|req: 10/10] 192.168.56.1 () {42 vars in 795 bytes} [Sun May 22 18:36:14 2016] GET /admin/login/?next=/admin/ => generated 1712 bytes in 10 msecs (HTTP/1.1 200) 7 headers in 373 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (:8001)
+running /home/vagrant/.pyenv/versions/3.5.1/bin/uwsgi
+[uWSGI] getting INI configuration from /home/myproject/uwsgi.ini
+*** Starting uWSGI 2.0.13.1 (64bit) on [Sun May 22 18:42:25 2016] ***
+compiled with version: 4.8.4 on 22 May 2016 08:30:50
+os: Linux-3.13.0-63-generic #103-Ubuntu SMP Fri Aug 14 21:42:59 UTC 2015
+nodename: vagrant-ubuntu-trusty-64
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+detected binary path: /home/vagrant/.pyenv/versions/3.5.1/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/myproject
+your processes number limit is 3842
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.5.1 (default, May 22 2016, 08:29:38)  [GCC 4.8.4]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x12baad0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145536 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x12baad0 pid: 1928 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1928)
+spawned uWSGI worker 1 (pid: 2482, cores: 1)
+*** Starting uWSGI 2.0.13.1 (64bit) on [Sun May 22 09:44:12 2016] ***
+compiled with version: 4.8.4 on 22 May 2016 08:30:50
+os: Linux-3.13.0-63-generic #103-Ubuntu SMP Fri Aug 14 21:42:59 UTC 2015
+nodename: vagrant-ubuntu-trusty-64
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /tmp/uwsgi.pid
+detected binary path: /home/vagrant/.pyenv/versions/3.5.1/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/myproject
+your processes number limit is 3842
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8001 fd 3
+Python version: 3.5.1 (default, May 22 2016, 08:29:38)  [GCC 4.8.4]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x17709b0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145536 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x17709b0 pid: 1918 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1918)
+spawned uWSGI worker 1 (pid: 1920, cores: 1)
+*** Starting uWSGI 2.0.13.1 (64bit) on [Sun May 22 09:44:59 2016] ***
+compiled with version: 4.8.4 on 22 May 2016 08:30:50
+os: Linux-3.13.0-63-generic #103-Ubuntu SMP Fri Aug 14 21:42:59 UTC 2015
+nodename: vagrant-ubuntu-trusty-64
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /
+writing pidfile to /tmp/uwsgi.pid
+detected binary path: /home/vagrant/.pyenv/versions/3.5.1/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/myproject
+your processes number limit is 3842
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (:8001).
+bind(): Address already in use [core/socket.c line 769]
