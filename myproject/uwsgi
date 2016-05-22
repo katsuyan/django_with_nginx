@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+# bye-reader start script
+#
+# chkconfig: 345 99 1
+# description: uwsgi start script
+# processname: uwsgi
+# pidfile: /tmp/uwsgi.pid
+#
+
+# Source function library.
+. /lib/lsb/init-functions
+
+PROGNAME="uwsgi"
+PID="/tmp/$PROGNAME.pid"
+LOCK="/tmp/$PROGNAME.lock"
+RETVAL=0
+
+UWSGI_BIN="/home/vagrant/.pyenv/shims/uwsgi"
+UWSGI_APP_BIN="/home/myproject"
+UWSGI_LOG="/home/myproject/log/$PROGNAME.log"
+UWSGI_APP_INIT="/home/myproject/uwsgi.ini"
+
+PROG=$UWSGI_BIN
+
+[ -f $PROG ] || exit 0
+
+start() {
+        echo -n "Starting $PROGNAME: "
+        $PROG $UWSGI_APP_INIT  --uid nginx --gid nginx -d $UWSGI_LOG --master --pidfile $PID
+        echo
+        [ $RETVAL = 0 ] && touch $LOCK
+        return $RETVAL
+}
+
+stop() {
+        echo -n "Stopping $PROGNAME: "
+        killproc -p $PID $PROGNAME -INT
+        RETVAL=$?
+        echo
+        [ $RETVAL = 0 ] && rm -f $LOCK $PID
+}
+
+show_status() {
+        status $PROGNAME
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    status)
+        show_status
+        ;;
+    *)
+        echo "Usage: $PROGNAME {start|stop|restart|status}"
+        RETVAL=2
+        ;;
+esac
+exit $RETVAL

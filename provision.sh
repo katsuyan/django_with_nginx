@@ -11,5 +11,9 @@ pyenv install 3.5.1
 pyenv global 3.5.1
 pip install --upgrade pip
 pip install django uwsgi django-bootstrap-form
+sudo mkdir /var/log/uwsgi
+sudo touch /var/log/uwsgi/uwsgi.log
+sudo cp /home/myproject/uwsgi /etc/init.d/
+service uwsgi start
 sudo ln -s /home/myproject/myproject_nginx.conf /etc/nginx/sites-enabled/
 sudo /etc/init.d/nginx restart
